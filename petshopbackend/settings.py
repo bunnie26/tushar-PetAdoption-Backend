@@ -85,7 +85,14 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # },
-    'default': dj_database_url.config(default="postgres://default:z23WrVSUtEfZ@ep-winter-tooth-97500638.us-east-1.postgres.vercel-storage.com:5432/verceldb?sslmode=require")
+    'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'verceldb',
+       'USER': 'default',
+       'PASSWORD': 'z23WrVSUtEfZ',
+       'HOST': 'ep-winter-tooth-97500638.us-east-1.postgres.vercel-storage.com',
+       'PORT': '5432',
+   }
 }
 
 
