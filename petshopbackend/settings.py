@@ -92,6 +92,10 @@ DATABASES = {
        'PASSWORD': 'z23WrVSUtEfZ',
        'HOST': 'ep-winter-tooth-97500638.us-east-1.postgres.vercel-storage.com',
        'PORT': '5432',
+       'OPTIONS': {
+            'sslmode': 'require',
+            'options': 'endpoint=ep-winter-tooth-97500638-pooler.us-east-1.postgres.vercel-storage.com',
+        },
    }
 }
 
