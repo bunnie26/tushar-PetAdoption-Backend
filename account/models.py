@@ -45,7 +45,7 @@ class User(AbstractBaseUser):
     is_admin = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    phone_number = models.CharField(max_length=15, null=True, default=None)
     # Add a ManyToManyField to link with pets adopted by a person
     adopted_pets = models.ManyToManyField('pets.Pet', related_name='adopted_by')
 
