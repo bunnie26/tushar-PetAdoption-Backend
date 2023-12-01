@@ -46,6 +46,10 @@ class User(AbstractBaseUser):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     phone_number = models.CharField(max_length=15, null=True, default=None)
+    country = models.CharField(max_length=20, default="India")
+    state = models.CharField(max_length=20, default="Delhi")
+    zip_code = models.CharField(max_length=20, default="")
+    address = models.CharField(max_length=50, default="")
     # Add a ManyToManyField to link with pets adopted by a person
     adopted_pets = models.ManyToManyField('pets.Pet', related_name='adopted_by')
 
